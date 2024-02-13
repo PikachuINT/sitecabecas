@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: linear-gradient(320deg, cyan, pink);
+            height: 100vh;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+        input[type="button"]{
+            padding: 10px;
+            margin: 8px;
+            border: none;
+            border-radius: 10px;
+            font: normal 15pt arial;
+            animation: fadeIn 7s;
+        }
+        input[type="button"]:hover{
+            background-color: pink;
+        }
+        input[type="text"]{
+            padding: 7px;
+            margin: 8px;
+            border: none;
+            border-radius: 20px;
+            text-align: center;
+            font: normal 12pt arial;
+            animation: fadeIn 3s;
+        }
+        #res{
+            font: normal 20pt arial;
+            color: rgb(255, 255, 255);
+            animation: fadeIn 2s;
+        }
+
+        @keyframes fadeIn{
+            from{
+                opacity: 0;
+            } to{
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+  <div id="res">Quem é o cabeção ?</div>
+    <input type="text" name="txtn1" id="txtn1">
+    <input type="button" value="Ativar" onclick="ativacao()">
+        <script>
+           function ativacao(){ 
+           var tn1 = window.document.getElementById('txtn1')
+             var res = window.document.getElementById('res')
+                 var name = (tn1.value)
+                    res.innerHTML = `O ${name} é o Cabeção`
+        
+        
+        }
+       </script> 
+</body>
+</html>
